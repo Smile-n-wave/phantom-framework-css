@@ -1,0 +1,831 @@
+/*
+Phantom Framework
+
+Table OF Contents
+------------------------------------
+1  > Typography
+2  > Simple Grid
+3  > Lists
+4  > Code
+5  > Tables
+6  > Forms
+7  > Buttons
+8  > Horizontal Spacing
+9  > Paddings
+10 > Margins
+11 > Text-Align
+12 > Heights 
+13 > sections
+14 > positions
+15 > widths
+16 > Z-index
+17 > Floats
+
+------------------------------------*/
+
+
+
+/* Typography
+   ========================================================================== */
+p
+{
+    text-overflow: ellipsis;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {  
+    line-height: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #464646;
+  font-weight: 300;
+  letter-spacing: -.1rem;
+  margin-bottom: 2.0rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 2.2rem;
+  letter-spacing: -.08rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.8rem;
+  letter-spacing: -.05rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+
+/* Grid - Simple-Grid
+   ========================================================================== */
+.container {  
+  max-width: 112.0rem;  
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+.row [class*="col-center"] {
+    margin: 0 auto;
+    float: none;
+}
+
+
+/* centered columns styles */
+.row-centered {
+    text-align:center !important;
+}
+.col-centered {
+    display:inline-block !important;
+    float:none !important;    
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.col [class*="offset"] {
+    margin:0;
+}
+
+/*Offsets*/
+.offset-1 {
+    margin-left: 10.33%;    
+}
+.offset-2 {
+     margin-left: 18.66%;    
+}
+.offset-3 {
+    margin-left: 27%;
+}
+.offset-4 {
+    margin-left: 35.33%;
+}
+.offset-5 {
+    margin-left: 43.66%;    
+}
+.offset-6 {
+    margin-left: 52%;
+}
+.offset-7 {
+    margin-left: 60.33;
+}
+.offset-8 {
+    margin-left: 68.66;    
+}
+.offset-9 {
+    margin-left: 77%;
+}
+.offset-10 {
+    margin-left: 85.33%;
+}
+.offset-11 {
+    margin-left: 93.66%;
+}
+
+
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+    
+    
+
+    
+    
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+
+
+input[type="text"]::before {
+    content:'f007';
+    float: left;
+}
+
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre; }
+
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+
+
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 0.8px solid #f1f1f1;  
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 0.8px solid #8678A9;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+
+
+
+
+
+/* Buttons
+   ========================================================================== */
+
+
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;  
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;  
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+    width: 100%;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform:capitalize;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+  text-decoration: none;
+    
+}
+
+
+
+
+
+/* Horizontal Spacing
+   ========================================================================== */
+
+.space, .space-1, .space-2, .space-3, .space-4, .space-5 {
+    border: none;
+    clear: both;
+    display: block;
+    margin: 0;
+    width: 100%;    
+}
+.space .space-1 {
+    height: 1rem;
+}
+.space-2 {
+    height: 2rem;
+}
+.space-3 {
+    height: 3rem;
+}
+.space-4 {
+    height: 4rem;
+}
+.space-5 {
+    height: 5rem;
+}
+
+
+/* Paddings
+   ========================================================================== */
+
+
+.pf-padding-1 {
+    padding: 1rem;
+}
+.pf-padding-2 {
+    padding: 2rem;
+}
+.pf-padding-3 {
+    padding: 3rem;
+}
+.pf-padding-4 {
+    padding: 4rem;
+}
+.pf-padding-5 {
+    padding: 5rem;
+}
+.pf-padding-tb-1 {
+    padding: 1rem 0;
+}
+.pf-padding-tb-2 {
+    padding: 2rem 0;
+}
+.pf-padding-tb-3 {
+    padding: 3rem 0;
+}
+.pf-padding-tb-4 {
+    padding: 4rem 0;
+}
+.pf-padding-tb-5 {
+    padding: 5rem 0;
+}
+.pf-padding-lr-1 {
+    padding: 0 1rem;
+}
+.pf-padding-lr-2 {
+    padding: 0 2rem;
+}
+.pf-padding-lr-3 {
+    padding: 0 3rem;
+}
+.pf-padding-lr-4 {
+    padding: 0 4rem;
+}
+.pf-padding-lr-5 {
+    padding: 0 5rem;
+}
+
+/* Margins
+   ========================================================================== */
+.pf-margin-auto {
+    margin: auto;
+}
+.pf-margin-1 {
+    margin: 1rem;
+}
+.pf-margin-2 {
+    margin: 2rem;
+}
+.pf-margin-3 {
+    margin: 3rem;
+}
+.pf-margin-4 {
+    margin: 4rem;
+}
+.pf-margin-5 {
+    margin: 5rem;
+}
+.pf-margin-tb-1 {
+    margin: 1rem 0;
+}
+.pf-margin-tb-2 {
+    margin: 2rem 0;
+}
+.pf-margin-tb-3 {
+    margin: 3rem 0;
+}
+.pf-margin-tb-4 {
+    margin: 4rem 0;
+}
+.pf-margin-tb-5 {
+    margin: 5rem 0;
+}
+.pf-margin-lr-1 {
+    margin: 0 1rem;
+}
+.pf-margin-lr-2 {
+    margin: 0 2rem;
+}
+.pf-margin-lr-3 {
+    margin: 0 3rem;
+}
+.pf-margin-lr-4 {
+    margin: 0 4rem;
+}
+.pf-margin-lr-5 {
+    margin: 0 5rem;
+}
+
+
+/* Text Align 
+   ========================================================================== */
+
+.pf-text-center {
+text-align: center;
+}
+.pf-text-left {
+text-align: left;
+}
+.pf-text-right {
+text-align: right;
+}
+
+
+/* Heights
+   ========================================================================== */
+
+.pf-height-1 {
+height: 100px;
+}
+.pf-height-2 {
+height: 200px;
+}
+.pf-height-3 {
+height:300px;
+}
+.pf-height-4 {
+height:400px;
+}
+.pf-height-5 {
+height:500px;
+}
+.pf-height-auto {
+height: auto;
+}
+.pf-width-auto {
+width: auto;
+}
+
+/* Sections
+   ========================================================================== */
+
+.pf-section-home {
+height: 100vh;
+overflow:hidden;
+}
+.pf-section-full-width {
+    width: 100%;
+}
+.pf-section-100,
+.pf-section-80,
+.pf-section-60 {
+height:auto;
+min-height:100px;
+}
+.pf-section-100 {
+  width: 90%;  
+padding: 0 5%;
+}
+.pf-section-80 {
+width: 80%;
+padding: 0 10%;
+}
+.pf-section-60 {
+width: 60%;
+padding: 0 20%;
+}
+
+/* Positions
+   ========================================================================== */
+
+.pf-fixed {
+    position: fixed;
+}
+.pf-absolute {
+    position: absolute;
+}
+.pf-relative {
+    position: relative;
+}
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: table;
+}
+
+/*Positions for absolute*/
+.pf-top,.pf-top-left,.pf-top-right {
+    top:0;
+}
+.pf-bottom,.pf-bottom-left,.pf-bottom-right {
+    bottom: 0;
+}
+.pf-left,.pf-top-left,.pf-bottom-left {
+    left: 0;
+}
+.pf-right,.pf-top-right,.pf-bottom-right{
+    right: 0;
+}
+
+
+/* Widths
+   ========================================================================== */
+
+.pf-width-100 {
+    width: 100%;
+}
+.pf-width-75 {
+    width:75%;
+}
+.pf-width-50 {
+    width: 50%;
+}
+.pf-width-25 {
+    width: 25%;
+}
+
+/* Z-index
+   ========================================================================== */
+.pf-zindex-10 {
+    z-index: 10;
+}
+.pf-zindex-20 {
+    z-index: 20;
+}
+.pf-zindex-30 {
+    z-index: 30;
+}
+.pf-zindex-max {
+    z-index: 99;
+}
+
+
+/* Floats
+   ========================================================================== */
+.pf-float-right {
+    float: right;
+}
+.pf-float-left {
+    float: left;
+}
+.pf-clear-both {
+    clear: both
+}
+
+
+
+/* Typography - Milligram
+   ========================================================================== */
+p
+{
+    text-overflow: ellipsis;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {  
+    line-height: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #464646;
+  font-weight: 300;
+  letter-spacing: -.1rem;
+  margin-bottom: 2.0rem;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 4.6rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 2.2rem;
+  letter-spacing: -.08rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.8rem;
+  letter-spacing: -.05rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
